@@ -8,6 +8,8 @@ Make sure that you rename `.env.example.txt` to `.env` or else the bot will not 
 
 in `src/functions/handleCommands.js`, make sure you fill in the fields `clientId` and `guildId`. if these are left blank, your bot will error and will not be able to run. make sure that you put the guild id of the server you want to use this bot in, as it will not show the commands if it is a different id.
 
+to run the bot, open a terminal/command prompt in the main folder (make sure its not the src folder), and run the command `npm run dev`
+
 ### Requirements
 * [Node.JS](https://nodejs.org/en/) V16 (6.0 or Higher)
 * [Discord.js V13](https://discord.js.org/#/) (13.7.0 or Higher)
