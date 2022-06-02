@@ -1,0 +1,21 @@
+{
+  "name": "bot13-git-template",
+  "version": "1.0.0",
+  "description": "a template of discord.js v13.7.0 for github",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/bot.js"
+  },
+  "author": "AlbinoFox (Frost)",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/builders": "^0.13.0",
+    "@discordjs/rest": "^0.4.1",
+    "discord-api-types": "^0.33.1",
+    "discord.js": "^13.7.0",
+    "dotenv": "^16.0.1",
+    "fs": "^0.0.1-security",
+    "ws": "^8.7.0"
+  }
+}
