@@ -11,6 +11,9 @@ in `src/functions/handleCommands.js`, make sure you fill in the fields `clientId
 to run the bot, open a terminal/command prompt in the main folder (make sure its not the src folder), and run the command `npm run dev`
 
 ### Requirements
+* Windows 10 OS or Later
+* 4 GB RAM (Node.JS requirement)
+* 10 GB free space (Node.JS requirement)
 * [Node.JS](https://nodejs.org/en/) V16 (6.0 or Higher)
 * [Discord.js V13](https://discord.js.org/#/) (13.7.0 or Higher)
 * a Code Editor ([Atom](https://atom.io), [VSC](https://code.visualstudio.com), etc.)
