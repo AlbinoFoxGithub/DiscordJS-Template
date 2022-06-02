@@ -10,6 +10,8 @@ in `src/functions/handleCommands.js`, make sure you fill in the fields `clientId
 
 to run the bot, open a terminal/command prompt in the main folder (make sure its not the src folder), and run the command `npm run dev`
 
+If you want to use the auto PM2 start file, make sure [PM2](https://pm2.keymetrics.io) is installed using `npm install pm2 -g`
+
 ### Requirements
 * Windows 10 OS or Later
 * 4 GB RAM (Node.JS requirement)
