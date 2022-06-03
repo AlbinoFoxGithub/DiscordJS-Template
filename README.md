@@ -4,6 +4,9 @@
  
  ## Usage
  
+ Discord.js Docs: https://discord.js.org/#/docs/main/stable/general/welcome
+ Discord.js Guide: https://discordjs.guide/#before-you-begin
+ 
 Make sure that you rename `.env.example.txt` to `.env` or else the bot will not work. in the `.env` file, make sure you replace `<ENTER BOT TOKEN HERE>` with your bots token. 
 
 in `src/functions/handleCommands.js`, make sure you fill in the fields `clientId` and `guildId`. if these are left blank, your bot will error and will not be able to run. make sure that you put the guild id of the server you want to use this bot in, as it will not show the commands if it is a different id.
