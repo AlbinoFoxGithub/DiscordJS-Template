@@ -5,6 +5,7 @@
  ## Usage
  
  Discord.js Docs: https://discord.js.org/#/docs/main/stable/general/welcome
+ 
  Discord.js Guide: https://discordjs.guide/#before-you-begin
  
 Make sure that you rename `.env.example.txt` to `.env` or else the bot will not work. in the `.env` file, make sure you replace `<ENTER BOT TOKEN HERE>` with your bots token. 
