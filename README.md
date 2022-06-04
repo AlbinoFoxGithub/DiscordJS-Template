@@ -34,6 +34,8 @@ await rest.put(
 );
 ```
 
+### Running The Bot
+
 to run the bot, open a terminal/command prompt in the main folder (make sure its not the src folder), and run the command `npm run dev`
 
 If you want to use the auto PM2 start file, make sure [PM2](https://pm2.keymetrics.io) is installed using `npm install pm2 -g`
@@ -50,4 +52,20 @@ If you want to use the auto PM2 start file, make sure [PM2](https://pm2.keymetri
 * a [Discord Application](https://discord.com/developers/applications)
 * Discord Developer Mode Enabled (Discord Client)
 ### How to Enable Discord Developer Mode
-![how to enable developer mode](https://im5.ezgif.com/tmp/ezgif-5-b4f03b7ad3.gif)
+To start, open Discord and sign in. Once you’re signed in, select the settings icon in the bottom-left corner next to your username.
+
+![image](https://user-images.githubusercontent.com/70042305/171981758-f5e08d99-8565-4705-8802-0ffb464e7dc4.png)
+
+In Discord’s settings menu, select the “Appearance” option in the menu on the left.
+
+![image](https://user-images.githubusercontent.com/70042305/171981782-cf729b2f-8524-47fe-bd5c-3c3baf274583.png)
+
+In the “Appearance” menu, you’ll see settings that impact how Discord appears to you, with theme options, message sizes, and accessibility settings.
+
+
+Scroll down to the bottom, then select the slider next to the “Developer Mode” option.
+![image](https://user-images.githubusercontent.com/70042305/171981833-1c809a74-9114-4385-ab01-a85d2d1cae3c.png)
+
+## Hosting
+
+There are several ways of hosting a discord bot. The method I included above is how to host locally from your computer using PM2. With this method, your computer would **need to be on and connected to the internet**. If you would like to host with a service like [Heroku](heroku.com), I would recommend you watch [this video](https://www.youtube.com/watch?v=uH3nWjql2IE).
