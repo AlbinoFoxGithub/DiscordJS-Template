@@ -12,6 +12,28 @@ Make sure that you rename `.env.example.txt` to `.env` or else the bot will not 
 
 in `src/functions/handleCommands.js`, make sure you fill in the fields `clientId` and `guildId`. if these are left blank, your bot will error and will not be able to run. make sure that you put the guild id of the server you want to use this bot in, as it will not show the commands if it is a different id.
 
+### Global Command Option
+
+if you would like your bot to have global commands instead of server only (guild) commands. follow these steps:
+
+* Go to `src/functions/handleCommands.js`
+
+* Find:
+```js
+await rest.put(
+    Routes.applicationGuildCommands(clientId, guildId), {
+    body: client.commandArray
+ },
+ );
+```
+* Replace it with:
+```js
+await rest.put(
+	Routes.applicationCommands(clientId),
+	{ body: client.commandArray },
+);
+```
+
 to run the bot, open a terminal/command prompt in the main folder (make sure its not the src folder), and run the command `npm run dev`
 
 If you want to use the auto PM2 start file, make sure [PM2](https://pm2.keymetrics.io) is installed using `npm install pm2 -g`
