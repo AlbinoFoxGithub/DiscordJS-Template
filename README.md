@@ -1,5 +1,7 @@
 ﻿# DiscordJS-Template
  
+ `Credit is always appreciated, but it is not required.`
+ 
  hello! this is the discord.js v13.7.0 template that explains basic commands, buttons, and select menus. Use this for any use you want.
  
  ## Usage
@@ -69,3 +71,27 @@ Scroll down to the bottom, then select the slider next to the “Developer Mode�
 ## Hosting
 
 There are several ways of hosting a discord bot. The method I included above is how to host locally from your computer using PM2. With this method, your computer would **need to be on and connected to the internet**. If you would like to host with a service like [Heroku](heroku.com), I would recommend you watch [this video](https://www.youtube.com/watch?v=uH3nWjql2IE).
+
+## Sharding
+
+Sharding is only required at 2,500 guilds. At that point, Your bot will not login without sharding. You should concider sharding around 2,000 guild so you have enough time to get sharding working properly. sharding itself is very simple, but it can be complicated depending on your bot's needs. If your bot is in more than 2,000 or more servers, then please continue with this guide or the [official documentation](https://discordjs.guide/sharding/#when-to-shard). If your bot is not to that scale, you may want to hold off on sharding.
+
+### How does sharding work?
+
+As an application grows large, a developer may find it necessary to split their process to run parallel to maximize efficiency. On a much larger scale of things, the developer might notice their process slow down, amongst other problems. Check out the [official Discord documentation on the topic.](https://discord.com/developers/docs/topics/gateway#sharding)
+
+### The Sharding File
+
+Rename your `bot.js` file to `index.js` and make a new file inside your `src` folder and name it `bot.js`. Make sure the file is in the same folder as the `index.js` file and not in a folder inside `src` (functions, commands, events, etc.). Copy & Paste this snippet of code into your new `bot.js` file.
+```js
+const { ShardingManager } = require('discord.js');
+
+const manager = new ShardingManager('./src/index.js', { token: process.env.TOKEN });
+
+manager.on('shardCreate', shard => console.log(`Launched shard ${shard.id}`));
+
+manager.spawn();
+```
+The above code utilizes the discord.js sharding manager to spawn the recommended amount of shards for your bot. The recommended amount should be approximately 1,000 guilds per shard. Note that you have to attach the event listener to `shardCreate` before calling `.spawn()` to prevent a race condition possibly preventing shard 0 from logging the successful launch.
+
+Read More [here.](https://discordjs.guide/sharding/#getting-started-1)
